@@ -1,0 +1,13 @@
+package com.whoisashif.learningrestapis;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class LearningrestapisApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
