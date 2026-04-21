@@ -1,10 +1,10 @@
-package com.whoisashif.learningrestapis.service.impl;
+package com.whoisashif.universitymanagementsystem.service.impl;
 
-import com.whoisashif.learningrestapis.dto.NewStudentDto;
-import com.whoisashif.learningrestapis.dto.StudentDto;
-import com.whoisashif.learningrestapis.entity.Student;
-import com.whoisashif.learningrestapis.repository.StudentRepository;
-import com.whoisashif.learningrestapis.service.StudentService;
+import com.whoisashif.universitymanagementsystem.dto.NewStudentDto;
+import com.whoisashif.universitymanagementsystem.dto.StudentDto;
+import com.whoisashif.universitymanagementsystem.entity.Student;
+import com.whoisashif.universitymanagementsystem.repository.StudentRepository;
+import com.whoisashif.universitymanagementsystem.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

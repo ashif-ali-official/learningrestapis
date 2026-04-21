@@ -1,4 +1,4 @@
-package com.whoisashif.learningrestapis.entity;
+package com.whoisashif.universitymanagementsystem.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

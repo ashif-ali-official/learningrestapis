@@ -1,13 +1,13 @@
-package com.whoisashif.learningrestapis;
+package com.whoisashif.universitymanagementsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearningrestapisApplication {
+public class UniversityManagementSystemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LearningrestapisApplication.class, args);
+		SpringApplication.run(UniversityManagementSystemApplication.class, args);
 	}
 
 }

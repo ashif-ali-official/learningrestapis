@@ -1,4 +1,4 @@
-package com.whoisashif.learningrestapis.dto;
+package com.whoisashif.universitymanagementsystem.dto;
 
 import jakarta.validation.constraints.Email;
 import lombok.Data;

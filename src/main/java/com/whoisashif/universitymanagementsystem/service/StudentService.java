@@ -1,7 +1,7 @@
-package com.whoisashif.learningrestapis.service;
+package com.whoisashif.universitymanagementsystem.service;
 
-import com.whoisashif.learningrestapis.dto.NewStudentDto;
-import com.whoisashif.learningrestapis.dto.StudentDto;
+import com.whoisashif.universitymanagementsystem.dto.NewStudentDto;
+import com.whoisashif.universitymanagementsystem.dto.StudentDto;
 
 import java.util.List;
 import java.util.Map;

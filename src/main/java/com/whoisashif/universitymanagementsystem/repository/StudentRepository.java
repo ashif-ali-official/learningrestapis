@@ -1,6 +1,6 @@
-package com.whoisashif.learningrestapis.repository;
+package com.whoisashif.universitymanagementsystem.repository;
 
-import com.whoisashif.learningrestapis.entity.Student;
+import com.whoisashif.universitymanagementsystem.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
