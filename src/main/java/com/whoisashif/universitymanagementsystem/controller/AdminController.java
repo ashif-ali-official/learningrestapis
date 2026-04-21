@@ -1,9 +1,6 @@
 package com.whoisashif.universitymanagementsystem.controller;
 
-import com.whoisashif.universitymanagementsystem.dto.NewProfessorDto;
-import com.whoisashif.universitymanagementsystem.dto.NewStudentDto;
-import com.whoisashif.universitymanagementsystem.dto.ProfessorDto;
-import com.whoisashif.universitymanagementsystem.dto.StudentDto;
+import com.whoisashif.universitymanagementsystem.dto.*;
 import com.whoisashif.universitymanagementsystem.service.ProfessorService;
 import com.whoisashif.universitymanagementsystem.service.StudentService;
 import jakarta.validation.Valid;
@@ -62,6 +59,12 @@ public class AdminController {
     @PatchMapping("/patchStudent/{id}")
     public ResponseEntity<StudentDto> updateStudentField(@PathVariable Long id, @RequestBody Map<String, Object> updates) {
         return ResponseEntity.ok(studentService.updateStudentField(id, updates));
+    }
+
+    // Professor's Salary
+    @GetMapping("/professor/salary/{professorId}")
+    public ResponseEntity<ProfessorCompensationDto> getProfessorCompensationByProfessorId(@PathVariable Long professorId) {
+        return ResponseEntity.ok(professorService.getProfessorCompensationByProfessorId(professorId));
     }
 
 }

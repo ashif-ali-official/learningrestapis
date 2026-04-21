@@ -1,6 +1,7 @@
 package com.whoisashif.universitymanagementsystem.service;
 
 import com.whoisashif.universitymanagementsystem.dto.NewProfessorDto;
+import com.whoisashif.universitymanagementsystem.dto.ProfessorCompensationDto;
 import com.whoisashif.universitymanagementsystem.dto.ProfessorDto;
 
 import java.util.List;
@@ -14,5 +15,8 @@ public interface ProfessorService {
      void removeProfessor(Long id);
      ProfessorDto updateProfessor(Long id, NewProfessorDto newStudent);
      ProfessorDto updateProfessorField(Long id, Map<String, Object> updates);
+
+     // Professor Compensation
+     ProfessorCompensationDto getProfessorCompensationByProfessorId(Long id);
 
 }

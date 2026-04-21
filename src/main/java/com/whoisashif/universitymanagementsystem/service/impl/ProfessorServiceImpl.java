@@ -1,8 +1,11 @@
 package com.whoisashif.universitymanagementsystem.service.impl;
 
 import com.whoisashif.universitymanagementsystem.dto.NewProfessorDto;
+import com.whoisashif.universitymanagementsystem.dto.ProfessorCompensationDto;
 import com.whoisashif.universitymanagementsystem.dto.ProfessorDto;
 import com.whoisashif.universitymanagementsystem.entity.Professor;
+import com.whoisashif.universitymanagementsystem.entity.ProfessorCompensation;
+import com.whoisashif.universitymanagementsystem.repository.ProfessorCompensationRepository;
 import com.whoisashif.universitymanagementsystem.repository.ProfessorRepository;
 import com.whoisashif.universitymanagementsystem.service.ProfessorService;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +19,7 @@ import java.util.Map;
 public class ProfessorServiceImpl implements ProfessorService {
 
     private final ProfessorRepository professorRepository;
+    private final ProfessorCompensationRepository professorCompensationRepository;
 
     @Override
     public List<ProfessorDto> getAllProfessors() {
@@ -66,5 +70,11 @@ public class ProfessorServiceImpl implements ProfessorService {
         });
         Professor patchedProfessor = professorRepository.save(professor);
         return new ProfessorDto(patchedProfessor.getId(), patchedProfessor.getName(), patchedProfessor.getEmail(), patchedProfessor.getDept());
+    }
+
+    @Override
+    public ProfessorCompensationDto getProfessorCompensationByProfessorId(Long id) {
+        ProfessorCompensation professorCompensation = professorCompensationRepository.findByProfessorId(id).orElseThrow( () -> new IllegalArgumentException("Professor wasn't found"));
+        return new ProfessorCompensationDto(professorCompensation.getId(), professorCompensation.getProfessor(), professorCompensation.getSalary());
     }
 }
